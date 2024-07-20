@@ -11,9 +11,13 @@ class Item extends Model
 
     protected $table = 'items';
 
-    protected $fillable = ['name', 'price', 'description'];
+    protected $primaryKey = 'id';
 
-    protected $primary = 'id';
+    protected $fillable = [
+        'name',
+        'price',
+        'description',
+    ];
 
     public function transactionItems()
     {

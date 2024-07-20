@@ -9,10 +9,13 @@ class TransactionItem extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'transaction_id',
+        'item_id',
+        'total_price',
+    ];
 
-    protected $table = 'transaction_items';
-    protected $fillable = ['transaction_id', 'item_id', 'quantity', 'total_price'];
-
+    protected $primaryKey = 'id';
 
     public function transaction()
     {

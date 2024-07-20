@@ -10,17 +10,13 @@ class Transaction extends Model
     use HasFactory;
 
     protected $table = 'transactions';
-    protected $fillable = ['user_id', 'item_id', 'total_pay'];
+    protected $primaryKey = 'id';
     
+    protected $fillable = [
+        'invoice_number',
+    ];
 
-   protected $primary = 'id';
-
-    public function user()
-    {
-        return $this->belongsTo(User::class);
-    }
-
-   public function transactionItems()
+    public function transactionItems()
     {
         return $this->hasMany(TransactionItem::class);
     }

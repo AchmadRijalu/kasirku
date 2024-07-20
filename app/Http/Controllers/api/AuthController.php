@@ -9,8 +9,6 @@ use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
-    //Login
-    
     public function userLogin(Request $request)
     {
         $loginData = $request->validate([
